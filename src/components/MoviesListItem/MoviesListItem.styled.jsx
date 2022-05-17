@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Item = styled.li`
   padding: 10px;
-  border-radius: 2px;
+  border-radius: 6px;
   display: flex;
   justify-content: center;
   align-items: center;

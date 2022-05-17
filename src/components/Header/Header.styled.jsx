@@ -32,6 +32,15 @@ export const Logo = styled(FaReact)`
   height: 30px;
   color: #fbbd0d;
   transition: opacity 250ms;
+
+  &:hover {
+    -webkit-animation-name: rotateIn;
+    animation-name: rotateIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+  }
 `;
 
 export const NavigationList = styled.ul`
