@@ -2,6 +2,7 @@ import { Route, Routes } from 'react-router-dom';
 import { lazy, Suspense } from 'react';
 import Layout from './Layout/Layout';
 import NotFoundPage from '../pages/NotFoundPage';
+import ScrollToTop from './ScrollToTop/ScrollToTop';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage'));
@@ -13,6 +14,7 @@ function App() {
   return (
     <>
       <Suspense>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
