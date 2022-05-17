@@ -3,6 +3,7 @@ import { lazy, Suspense } from 'react';
 import Layout from './Layout/Layout';
 import NotFoundPage from '../pages/NotFoundPage';
 import ScrollToTop from './ScrollToTop/ScrollToTop';
+import Loader from './Loader/Loader';
 
 const HomePage = lazy(() => import('../pages/HomePage'));
 const MoviesPage = lazy(() => import('../pages/MoviesPage'));
@@ -13,7 +14,7 @@ const ReviewsPage = lazy(() => import('../pages/ReviewsPage'));
 function App() {
   return (
     <>
-      <Suspense>
+      <Suspense fallback={<Loader />}>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Layout />}>
